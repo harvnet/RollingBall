@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--mainView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="mainView" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="mainView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-tB-qLs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="36"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal" title="Holy Balls">
+                                    <color key="titleColor" red="0.023529414087533951" green="0.0039215688593685627" blue="0.0039215688593685627" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="42" width="322" height="71"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="87k-dG-XHV"/>
+                                    <segue destination="6Er-ys-STf" kind="show" identifier="segue1" id="YsB-7X-ggo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balls.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WTd-wy-6VW">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="139" width="437" height="661"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="7hT-tB-qLs"/>
+                                <exclude reference="WTd-wy-6VW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="7hT-tB-qLs"/>
+                                <include reference="WTd-wy-6VW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="366"/>
+        </scene>
+        <!--ballView-->
+        <scene sceneID="fWi-jF-Qy7">
+            <objects>
+                <viewController id="6Er-ys-STf" userLabel="ballView" customClass="LoopControllerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3n8-f5-2oV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dv1-fh-v7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yNJ-kx-9eP" userLabel="ballView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhG-ji-Q7b">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="235" y="91" width="36" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="rightButtonPress:" destination="6Er-ys-STf" eventType="touchDown" id="jpg-gf-cOt"/>
+                                    <action selector="rightButtonRelease:" destination="6Er-ys-STf" eventType="touchUpOutside" id="Ii3-nB-Fph"/>
+                                    <action selector="rightButtonRelease:" destination="6Er-ys-STf" eventType="touchUpInside" id="XJe-qC-eZB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-i6-29e">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="91" width="30" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="leftButtonPress:" destination="6Er-ys-STf" eventType="touchDown" id="Br2-gg-g9P"/>
+                                    <action selector="leftButtonRelease:" destination="6Er-ys-STf" eventType="touchUpInside" id="FZT-BY-IHt"/>
+                                    <action selector="leftButtonRelease:" destination="6Er-ys-STf" eventType="touchUpOutside" id="uSV-de-2Ny"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPJ-Bh-bmZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="&lt; Back"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="28" width="64" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="backButton:" destination="6Er-ys-STf" eventType="touchUpInside" id="o2M-J4-DJd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8yK-M9-zGw">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Down"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="178" y="120" width="39" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="downButtonPress:" destination="6Er-ys-STf" eventType="touchDown" id="DBz-4j-NL1"/>
+                                    <action selector="downButtonRelease:" destination="6Er-ys-STf" eventType="touchUpOutside" id="B0s-2u-bUI"/>
+                                    <action selector="downButtonRelease:" destination="6Er-ys-STf" eventType="touchUpInside" id="jmw-vc-pNu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoV-5h-Eoh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Up"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="174" y="64" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="upButtonPress:" destination="6Er-ys-STf" eventType="touchDown" id="Ejv-kO-cqX"/>
+                                    <action selector="upButtonRelease:" destination="6Er-ys-STf" eventType="touchUpInside" id="BQC-aR-eGQ"/>
+                                    <action selector="upButtonRelease:" destination="6Er-ys-STf" eventType="touchUpOutside" id="WdH-N2-glJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="Sb2-ke-4c8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="153" y="248" width="64" height="64"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BhG-ji-Q7b"/>
+                                <exclude reference="KVc-i6-29e"/>
+                                <exclude reference="LPJ-Bh-bmZ"/>
+                                <exclude reference="8yK-M9-zGw"/>
+                                <exclude reference="XoV-5h-Eoh"/>
+                                <exclude reference="Sb2-ke-4c8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="BhG-ji-Q7b"/>
+                                <include reference="KVc-i6-29e"/>
+                                <include reference="LPJ-Bh-bmZ"/>
+                                <include reference="8yK-M9-zGw"/>
+                                <include reference="XoV-5h-Eoh"/>
+                                <include reference="Sb2-ke-4c8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ballImage" destination="Sb2-ke-4c8" id="zEt-di-d9I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a0J-lc-GKc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="987" y="366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ball.png" width="64" height="64"/>
+        <image name="balls.jpg" width="1080" height="1920"/>
+    </resources>
+</document>
